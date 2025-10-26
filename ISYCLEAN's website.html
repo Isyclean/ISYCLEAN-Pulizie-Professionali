@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ISYCLEAN - Pulizie Professionali</title>
+  <link rel="icon" href="ChatGPT Image 7 set 2025, 12_36_02.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: #0e0e0e; color: #fff; overflow-x: hidden; }
+
+    header { position: fixed; top: 0; width: 100%; background: rgba(14,14,14,0.8); backdrop-filter: blur(8px); padding: 20px 50px; display: flex; align-items: center; justify-content: space-between; z-index: 1000; animation: slideDown 0.8s ease forwards; }
+    .logo { font-size: 1.7rem; font-weight: 700; letter-spacing: 1px; }
+    nav ul { display: flex; list-style: none; gap: 30px; }
+    nav a { color: #eee; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: #707070; }
+
+    #home {
+      position: relative;
+      height: 100vh;
+      background: url('remove_watermark_image_20251026_122449.png') center/cover no-repeat fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    #home::before {
+      content: "";
+      position: absolute;
+      width: 100%; height: 100%;
+      top: 0; left: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      animation: fadeInUp 1.5s ease-out;
+    }
+    .hero-content h1 { font-size: 3rem; margin-bottom: 20px; }
+    .hero-content p { font-size: 1.4rem; margin-bottom: 40px; color: #ccc; }
+    .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 2px solid #fff;
+      transition: all 0.3s ease;
+    }
+    .btn-outline { background: transparent; color: #fff; }
+    .btn-outline:hover { background: #fff; color: #111; }
+    .btn-solid { background: #fff; color: #111; }
+    .btn-solid:hover { background: #e2e2e2; }
+
+    section {
+      padding: 120px 20px 100px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: reveal 1s forwards;
+    }
+    h2 { font-size: 2.8rem; margin-bottom: 20px; color: #fff; }
+    section p { font-size: 1.1rem; color: #aaa; max-width: 800px; margin: 0 auto 40px; }
+
+    #servizi .packages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .package {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 280px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .package:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 28px rgba(255,255,255,0.2);
+    }
+    .package img { width: 100%; height: 180px; object-fit: cover; }
+    .package-content { padding: 20px; }
+    .package-content h3 { font-size: 1.4rem; margin-bottom: 10px; }
+    .package-content p { font-size: 1rem; color: #bbb; }
+
+    #about .bio { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center; }
+    .bio-text { max-width: 600px; font-size: 1rem; line-height: 1.8; color: #ccc; }
+
+    #contatti { background: #111; color: #ddd; }
+    .contact-content { padding: 40px 20px; }
+    .contact-content a { color: #fff; text-decoration: none; font-weight: 600; }
+    .contact-content a:hover { text-decoration: underline; }
+
+    footer {
+      background: #0e0e0e;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .social-icons a { color: #fff; margin: 0 10px; font-size: 1.2rem; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+    @keyframes reveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 15px 25px; }
+      nav ul { gap: 20px; }
+      .hero-content h1 { font-size: 2.3rem; }
+      .bio { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">ISYCLEAN</div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#about">Chi Siamo</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Spazi brillanti, clienti soddisfatti</h1>
+    <p>Ci prendiamo cura dei tuoi spazi come se fossero i nostri. Puntualità, precisione, discrezione.</p>
+    <div class="hero-buttons">
+      <a class="btn btn-solid" href="tel:+393311412743" class="call-btn">Chiama ora</a>
+      <a class="btn btn-outline" href="mailto:isyclean.pulizie@gmail.com">Contattaci via Email</a>
+      <a class="btn btn-solid" href="https://wa.me/3311412743" target="_blank">Scrivici su WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="servizi">
+  <h2>I Nostri Servizi</h2>
+  <p>Efficienza, puntualità e attenzione ai dettagli: la tua soddisfazione è la nostra missione.</p>
+  <div class="packages">
+    <div class="package">
+      <img src="pexels-vladvictoria-1623214.jpg" alt="Rimozione e smaltimento foglie">
+      <div class="package-content">
+        <h3>Rimozione e smaltimento foglie</h3>
+        <p>Interventi su misura per ogni esigenza.</p>
+        <div class="package-buttons">
+            <a href="mailto:isyclean.pulizie@gmail.com?subject=Prenotazione%20Servizio%20Pulizia%20Condominiale&body=Salve,%20vorrei%20prenotare%20questo%20servizio:%20Pulizia%20Condominiale"
+               class="btn btn-outline">
+              Preventivo gratuito
+            </a>
+        </div>
+      </div>
+    </div>
+    <div class="package">
+      <img src="fotocond.jpg" alt="Pulizia Condominiale">
+      <div class="package-content">
+        <h3>Pulizia Condominiale</h3>
+        <p>Pulizia completa di condomini e scale condominiali.</p>
+        <div class="package-buttons">
+            <a href="mailto:isyclean.pulizie@gmail.com?subject=Prenotazione%20Servizio%20Pulizia%20Condominiale&body=Salve,%20vorrei%20prenotare%20questo%20servizio:%20Pulizia%20Condominiale"
+               class="btn btn-outline">
+              Preventivo gratuito
+            </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about"> 
+  <h2>Chi Siamo</h2>
+  <div class="bio">
+    <div class="bio-text">
+      <p>
+        ISYCLEAN nasce con l’obiettivo di offrire servizi di pulizia impeccabili, con un team esperto, strumenti all’avanguardia e un’attenzione particolare all’ambiente. 
+        Siamo specializzati in pulizie civili e condominiali. 
+        <br><br>
+        <strong>Perché sceglierci?</strong><br>
+        ✔️ Team qualificato e formato <br>
+        ✔️ Prodotti ecologici e non acidi <br>
+        ✔️ Interventi flessibili e su misura <br>
+        ✔️ Massima discrezione e puntualità
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Sfondo con immagine sfuocata */
+  #about {
+    position: relative;
+    padding: 4rem 1.5rem;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  /* Immagine di sfondo */
+  #about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("remove_watermark_image_20251026_123221.png") center/cover no-repeat;
+    filter: blur(6px) brightness(0.6);
+    z-index: 0;
+  }
+
+  /* Overlay per migliorare contrasto */
+  #about::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+  }
+
+  /* Contenuto */
+  #about .bio {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  #about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    z-index: 2;
+    position: relative;
+  }
+
+  #about p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+  }
+
+  @media (max-width: 600px) {
+    #about p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<section id="contatti">
+  <div class="contact-content">
+    <h2>Contattaci</h2>
+    <p>
+      <i class="fa-solid fa-envelope"></i>
+      Email: <a href="mailto:isyclean.pulizie@gmail.com">Contattaci via Email</a><br>
+
+      <i class="fa-brands fa-whatsapp"></i>
+      WhatsApp: <a href="https://wa.me/3311412743" target="_blank">Scrivici su WhatsApp</a><br>
+
+      <i class="fa-solid fa-phone"></i>
+      <a href="tel:+393311412743" class="call-btn">Chiama ora</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 ISYCLEAN - Tutti i diritti riservati.</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('section');
+  const options = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        obs.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>
